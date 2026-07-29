@@ -5,6 +5,8 @@ from pyspark.sql import SparkSession
 sc = SparkContext.getOrCreate()
 spark = SparkSession.builder.getOrCreate()
 
+print("testing")
+
 # Script generated for node S3DataSource
 S3DataSource_1785284763310 = spark.read.format("json") \
     .option("multiLine", "true") \
