@@ -1,0 +1,105 @@
+{
+  "JobName": "Untitled test",
+  "bucketName": "amazon-sagemaker-598122632870-us-east-2-967cfa2a2653",
+  "formInput": {
+    "FileName": "Untitled test",
+    "ContentType": "text/x-python",
+    "Body": "import sys\nfrom pyspark.context import SparkContext\nfrom pyspark.sql import SparkSession\n\nsc = SparkContext.getOrCreate()\nspark = SparkSession.builder.getOrCreate()\n\n# Script generated for node S3DataSource\nS3DataSource_1785284763310 = spark.read.format(\"json\") \\\n    .option(\"multiLine\", \"true\") \\\n    .load(\"s3://amazon-sagemaker-598122632870-us-east-2-967cfa2a2653/dzd-4ly7wie4jqr90p/53fl1drf6u4hih/shared/.libs.json\")\n"
+  },
+  "JobUpdate": {
+    "Name": "Untitled test",
+    "Timeout": 480,
+    "WorkerType": "G.1X",
+    "NumberOfWorkers": 10,
+    "GlueVersion": "5.1",
+    "MaxRetries": 0,
+    "Role": "arn:aws:iam::598122632870:role/datazone_usr_role_53fl1drf6u4hih_bg9xh73r7uvhgp",
+    "JobMode": "VISUAL",
+    "JobRunQueuingEnabled": false,
+    "ExecutionProperty": {
+      "MaxConcurrentRuns": 1
+    },
+    "ExecutionClass": "STANDARD",
+    "NonOverridableArguments": {},
+    "Connections": {
+      "Connections": [
+        "datazone-glue-network-connection-subnet-050cbb500b40f524c-53fl1drf6u4hih-dev",
+        "datazone-glue-network-connection-subnet-0d1dd562e2bb7b01e-53fl1drf6u4hih-dev",
+        "datazone-glue-network-connection-subnet-0d595741c771f4d5c-53fl1drf6u4hih-dev"
+      ]
+    },
+    "DefaultArguments": {
+      "--enable-lakeformation-fine-grained-access": "false",
+      "--job-language": "python",
+      "--TempDir": "s3://amazon-sagemaker-598122632870-us-east-2-967cfa2a2653/dzd-4ly7wie4jqr90p/53fl1drf6u4hih/sys/glue/temp/",
+      "--enable-metrics": "true",
+      "--enable-observability-metrics": "false",
+      "--spark-event-logs-path": "s3://amazon-sagemaker-598122632870-us-east-2-967cfa2a2653/dzd-4ly7wie4jqr90p/53fl1drf6u4hih/sys/glue/spark/",
+      "--enable-glue-datacatalog": "true",
+      "--enable-spark-ui": "true",
+      "--enable-auto-scaling": "true",
+      "--smus-job-compute": "project.spark.compatibility",
+      "--smus-orig-asset": "jobs/Untitled test/Untitled test.vetl",
+      "--conf": "spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.datasource.redshift.community.glue_endpoint=https://glue.us-east-2.amazonaws.com --conf spark.datasource.redshift.community.data_api_endpoint=https://redshift-data.us-east-2.amazonaws.com --conf spark.hadoop.fs.s3.impl=com.amazon.ws.emr.hadoop.fs.EmrFileSystem --conf spark.driver.maxResultSize=0 --conf spark.sql.catalog.spark_catalog=org.apache.iceberg.spark.SparkSessionCatalog --conf spark.sql.catalog.spark_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.spark_catalog.glue.id=598122632870 --conf spark.sql.catalog.spark_catalog.glue.account-id=598122632870 --conf spark.sql.catalog.spark_catalog.glue.endpoint=https://glue.us-east-2.amazonaws.com --conf spark.sql.catalog.spark_catalog.client.region=us-east-2 --conf spark.extraListeners=io.openlineage.spark.agent.OpenLineageSparkListener --conf spark.openlineage.transport.type=amazon_datazone_api --conf spark.openlineage.transport.domainId=dzd-4ly7wie4jqr90p --conf spark.openlineage.columnLineage.datasetLineageEnabled=True --conf spark.openlineage.facets.custom_environment_variables=[AWS_DEFAULT_REGION;GLUE_VERSION;GLUE_COMMAND_CRITERIA;GLUE_PYTHON_VERSION;] --conf spark.glue.accountId=598122632870 --conf spark.glue.JOB_NAME=Untitled test --conf spark.hadoop.fs.s3.credentialsResolverClass=com.amazonaws.glue.accesscontrol.AWSLakeFormationCredentialResolver --conf spark.hadoop.fs.s3.useDirectoryHeaderAsFolderObject=true --conf spark.hadoop.fs.s3.folderObject.autoAction.disabled=true --conf spark.sql.catalog.createDirectoryAfterTable.enabled=true --conf spark.sql.catalog.dropDirectoryBeforeTable.enabled=true --conf spark.sql.catalog.spark_catalog.glue.lakeformation-enabled=true --conf spark.sql.catalog.skipLocationValidationOnCreateTable.enabled=true",
+      "--custom-logGroup-prefix": "datazone-53fl1drf6u4hih-dev",
+      "author": "pkgorde@amazon.com"
+    },
+    "connection": {
+      "configurations": [
+        {
+          "classification": "GlueDefaultArgument",
+          "properties": {
+            "--enable-lakeformation-fine-grained-access": "false"
+          }
+        }
+      ],
+      "domainIdentifier": "dzd-4ly7wie4jqr90p",
+      "projectIdentifier": "53fl1drf6u4hih",
+      "environmentIdentifier": "bg9xh73r7uvhgp",
+      "connectionIdentifier": "6di4742y3lefc9",
+      "name": "project.spark.compatibility",
+      "displayType": "Glue (Spark)",
+      "type": "SPARK",
+      "authorizationMode": "PROJECT",
+      "provisioningType": "MANAGED",
+      "createdAt": "2026-07-29T00:14:26.337Z",
+      "updatedAt": "2026-07-29T00:14:26.337Z",
+      "location": {
+        "awsRegion": "us-east-2",
+        "awsAccountId": "598122632870"
+      },
+      "physicalEndpoints": [
+        {
+          "awsLocation": {
+            "awsAccountId": "598122632870",
+            "awsRegion": "us-east-2"
+          },
+          "glueConnectionName": "datazone-glue-network-connection-subnet-050cbb500b40f524c-53fl1drf6u4hih-dev",
+          "glueConnectionNames": [
+            "datazone-glue-network-connection-subnet-050cbb500b40f524c-53fl1drf6u4hih-dev",
+            "datazone-glue-network-connection-subnet-0d1dd562e2bb7b01e-53fl1drf6u4hih-dev",
+            "datazone-glue-network-connection-subnet-0d595741c771f4d5c-53fl1drf6u4hih-dev"
+          ]
+        }
+      ],
+      "sparkGlueProperties": {
+        "glueConnection": {},
+        "sessionConfigs": {
+          "idle_timeout": 60,
+          "glue_version": "5.0",
+          "worker_type": "G.1X",
+          "number_of_workers": 10
+        }
+      }
+    },
+    "Command": {
+      "Name": "glueetl",
+      "ScriptLocation": "s3://amazon-sagemaker-598122632870-us-east-2-967cfa2a2653/dzd-4ly7wie4jqr90p/53fl1drf6u4hih/shared/jobs/Untitled test/Untitled test.py",
+      "PythonVersion": "3.9"
+    },
+    "Tags": {
+      "AmazonDataZoneProject": "53fl1drf6u4hih",
+      "AmazonDataZoneUsername": "pkgorde@amazon.com"
+    }
+  }
+}
