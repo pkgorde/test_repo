@@ -1,1 +1,1 @@
-# test_repo hi from burner in SIN
+# test_repo hi from burner in SYD
