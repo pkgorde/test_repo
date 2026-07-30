@@ -1,1 +1,1 @@
-# test_repo hi from burner in SYD
+# test_repo hi from burner in CDG
